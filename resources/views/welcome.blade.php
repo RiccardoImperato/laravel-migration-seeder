@@ -17,11 +17,13 @@
                 <li class="card p-3 my-3 flex-row">
                     <div class="w-50">
                         <h5>Partenza</h5>
-                        {{ $train['stazione_partenza'] }} - data/ora: {{ $train['orario_partenza'] }}
+                        {{ $train['stazione_partenza'] }} - ora: {{ $train['orario_partenza'] }} -
+                        data: {{ $train['data'] }}
                     </div>
                     <div class="w-50">
                         <h5>Arrivo</h5>
-                        {{ $train['stazione_arrivo'] }} - data/ora: {{ $train['orario_arrivo'] }}
+                        {{ $train['stazione_arrivo'] }} - ora: {{ $train['orario_arrivo'] }} -
+                        data: {{ $train['data'] }}
                     </div>
                 </li>
             @endforeach
