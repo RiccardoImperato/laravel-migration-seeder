@@ -10,7 +10,23 @@
 </head>
 
 <body>
-
+    <main class="container">
+        <h1 class="text-center my-5">Trains</h1>
+        <ul>
+            @foreach ($trains as $train)
+                <li class="card p-3 my-3 flex-row">
+                    <div class="w-50">
+                        <h5>Partenza</h5>
+                        {{ $train['stazione_partenza'] }} - data/ora: {{ $train['orario_partenza'] }}
+                    </div>
+                    <div class="w-50">
+                        <h5>Arrivo</h5>
+                        {{ $train['stazione_arrivo'] }} - data/ora: {{ $train['orario_arrivo'] }}
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+    </main>
 </body>
 
 </html>
